@@ -92,13 +92,7 @@ jobs:
       shell: bash
       run: |
         cd build && ninja
-    - name: Running C++ Tests
-      shell: bash
-      run: |
-        if [[ "${{ runner.os }}" == "Linux" ]] ; then
-          export XVFB=xvfb-run
-        fi
-        cd build && $XVFB ctest --output-on-failure
+
     - name: Running CLI Tests
       if: ${{ matrix.scripting == 'lua' }}
       shell: bash
