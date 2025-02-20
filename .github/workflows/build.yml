@@ -7,8 +7,8 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest]
-        build_type: [RelWithDebInfo, Debug]
-        ui: [gui, cli]
+        build_type: [Release]
+        ui: [on]
         scripting: [lua, noscripts]
         exclude:
           - build_type: Debug
